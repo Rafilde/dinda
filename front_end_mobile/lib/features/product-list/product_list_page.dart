@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:front_end_mobile/shared/app_routes.dart';
 import '../../shared/colors.dart';
 import '../../shared/widgets/app_bar.dart';
 import '../../shared/widgets/stylish_float_action_button.dart';
@@ -17,14 +18,18 @@ class _ProductListPageState extends State<ProductListPage> {
       'name': 'Produto 1',
       'quantity': 10,
       'price': 19.99,
-      'imageUrls': ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPjdt3COye-stiyIAoH6hDjC9NWKFcVwizog&s'],
+      'imageUrls': [
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPjdt3COye-stiyIAoH6hDjC9NWKFcVwizog&s'
+      ],
     },
     {
       'id': 2,
       'name': 'Produto 2',
       'quantity': 5,
       'price': 29.99,
-      'imageUrls': ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPjdt3COye-stiyIAoH6hDjC9NWKFcVwizog&s'],
+      'imageUrls': [
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPjdt3COye-stiyIAoH6hDjC9NWKFcVwizog&s'
+      ],
     },
     {
       'id': 3,
@@ -48,6 +53,7 @@ class _ProductListPageState extends State<ProductListPage> {
       backgroundColor: AppColors.backgroundColor,
       floatingActionButton: StylishFAB(
         onPressed: () {
+          Navigator.pushReplacementNamed(context, AppRoutes.REGISTER_PRODUCT);
         },
         icon: Icons.add,
         color: AppColors.primaryColor,
@@ -152,8 +158,6 @@ class _ProductListPageState extends State<ProductListPage> {
             ),
           ),
         );
-
-
       },
     );
   }
